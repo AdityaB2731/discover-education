@@ -1,7 +1,6 @@
-
 import React, { useState, useEffect } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
-import { Search, Filter, X, ArrowRight, Star, BookOpen, Clock } from 'lucide-react';
+import { Search, Filter, X, ArrowRight, Star, BookOpen, Clock, Users } from 'lucide-react';
 
 const SearchResults = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -366,9 +365,9 @@ const SearchResults = () => {
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-primary focus:border-primary"
                   >
                     <option value="all">Any Duration</option>
-                    <option value="short">Short (< 30 hours / 4-6 months)</option>
+                    <option value="short">Short (&lt; 30 hours / 4-6 months)</option>
                     <option value="medium">Medium (30-50 hours / 6-8 months)</option>
-                    <option value="long">Long (> 50 hours / 8+ months)</option>
+                    <option value="long">Long (&gt; 50 hours / 8+ months)</option>
                   </select>
                 </div>
               </div>
