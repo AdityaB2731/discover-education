@@ -1,0 +1,10 @@
+# Ignore node_modules
+node_modules/
+
+# Ignore environment files
+.env
+
+# Optionally, if you have any other files to ignore, you can add them here:
+# .env.local
+# .env.* (to ignore all env files)
+# .vscode/  (if you're using Visual Studio Code)
