@@ -48,18 +48,80 @@
   }
   
   .btn-primary {
-    @apply bg-primary text-white px-4 py-2 rounded-md hover:bg-secondary transition-colors;
+    @apply bg-primary text-white px-6 py-3 rounded-md hover:bg-secondary transition-colors shadow-md font-medium;
   }
   
   .btn-secondary {
-    @apply bg-secondary text-white px-4 py-2 rounded-md hover:bg-primary transition-colors;
+    @apply bg-secondary text-white px-6 py-3 rounded-md hover:bg-primary transition-colors shadow-md font-medium;
   }
 
   .btn-accent {
-    @apply bg-accent text-white px-4 py-2 rounded-md hover:bg-accent/90 transition-colors;
+    @apply bg-accent text-white px-6 py-3 rounded-md hover:bg-accent/90 transition-colors shadow-md font-medium;
   }
   
   .card-hover {
-    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
   }
+  
+  .page-container {
+    @apply min-h-screen bg-gradient-to-b from-blue-50 to-white pb-12;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-gray-800 mb-6 relative;
+  }
+  
+  .section-title::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-16 h-1 bg-primary;
+  }
+  
+  .section-subtitle {
+    @apply text-xl text-gray-600 mb-10 max-w-3xl;
+  }
+  
+  .feature-card {
+    @apply bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100;
+  }
+  
+  .form-input {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
+  }
+  
+  .nav-link {
+    @apply transition-colors duration-200 hover:text-primary;
+  }
+  
+  .card-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+  }
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s infinite;
 }
